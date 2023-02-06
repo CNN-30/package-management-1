@@ -1,7 +1,7 @@
 #!/bin/bash
 #i1) Switch to root user [ sudo -i]
 
-sudo hostnamectl set-hostname  node1
+sudo hostnamectl set-hostname  k8s worker 1
 
 #2) Disable swap & add kernel settings
 
@@ -97,4 +97,5 @@ systemctl start kubelet
 systemctl enable kubelet.service
 
 sudo kubeadm join 10.0.0.6:6443 --token xmzufh.e0nu3kb5ohijfxyh \
-        --discovery-token-ca-cert-hash sha256:579b6a53bd00c8483f5150b9fb521b6431fc38b1ac716b8b9a5f668928a93771
+        --discovery-token-ca-cert-hash sha256:677f933fd1f843802141147b2c23174f44cb59bc4774aa6bb4e9d0f011d9abec
+
